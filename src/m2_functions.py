@@ -29,6 +29,9 @@ def main():
     print("We want to test Triangle. We expect the next line to say 5.0")
     print(triangle(3.14159, .0982762662))
 
+    rope('red', 6)
+    rope('black', 100)
+
 ###############################################################################
 # Done: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
@@ -50,7 +53,7 @@ def triangle(a, b):
 
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# Done: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -72,14 +75,25 @@ def triangle(a, b):
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# Done: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-def rope(color, thickness)
+def rope(color, thickness):
+    window = rg.TurtleWindow()
+
+    greenturtle = rg.SimpleTurtle('turtle')
+    greenturtle.pen = rg.Pen('green', thickness)
+    otherturtle = rg.SimpleTurtle('turtle')
+    otherturtle.pen = rg.Pen(color, 5)
+
+    greenturtle.forward(100)
+    otherturtle.backward(100)
+
+    window.close_on_mouse_click()
 
 ###############################################################################
-# TODO: 5.
+# Done: 5.
 #   COMMIT-and-PUSH your work (after changing this TO-DO to DONE).
 #
 #   As a reminder, here is how you should do so:
